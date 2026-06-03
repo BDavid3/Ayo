@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class TapeRecorder : MonoBehaviour
+/*public class TapeRecorder : MonoBehaviour
 {
     private Outline _outline;
     public GameObject canvas;
@@ -49,4 +49,4 @@ public class TapeRecorder : MonoBehaviour
     {
         audioSource.Play();
     }
-}
+} */

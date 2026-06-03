@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class NoteBook : MonoBehaviour
 {
@@ -30,4 +30,4 @@ public class NoteBook : MonoBehaviour
             
         }
     }
-}
+} */

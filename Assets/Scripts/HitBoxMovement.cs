@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class HitBoxMovement : MonoBehaviour
 {
-    private PlayerAndCameraMovement _playerAndCameraMovement;
+    [SerializeField] private PlayerAndCameraMovement playerAndCameraMovement;
 
-    private void Update()
+    void Update()
     {
-        Quaternion targetRotation = Quaternion.Euler(_playerAndCameraMovement.pitch, _playerAndCameraMovement.yaw, 0f);
+        Quaternion targetRotation = Quaternion.Euler(playerAndCameraMovement.pitch, playerAndCameraMovement.yaw, 0f);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
     }
     
