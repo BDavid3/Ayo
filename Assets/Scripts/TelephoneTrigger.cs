@@ -4,6 +4,7 @@ using UnityEngine;
 public class PhoneTrigger : MonoBehaviour
 {
     [SerializeField] private AudioSource phoneAudio;
+    [SerializeField]  private Outline outline;
     
     void OnTriggerEnter(Collider other)
     {
@@ -11,6 +12,7 @@ public class PhoneTrigger : MonoBehaviour
         {
             phoneAudio.Play();
             gameObject.SetActive(false);
+            outline.enabled = true;
         }
     }
 }
