@@ -2,5 +2,8 @@
 // Inheritance in the interactable script 
 // Perhaps merging the movement + camera script, and the others 
 
-// After Load file -> Set cursor disabled and locekd -> and also the intro
+// After Load file -> Set cursor disabled and locked -> and also the intro
+
+
+// Stop The BEEP
 
