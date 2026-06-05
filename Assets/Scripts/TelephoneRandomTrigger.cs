@@ -26,7 +26,7 @@ public class TelephoneRandomTrigger : MonoBehaviour
     {
         while (true)
         {
-            int randomNumber = Random.Range(0, 2);
+            int randomNumber = Random.Range(0, 10000000);
             
             if (randomNumber == 0)
             {
