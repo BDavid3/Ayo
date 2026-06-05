@@ -3,8 +3,9 @@ using UnityEngine;
 public class StarterScript : MonoBehaviour
 {
     // Disable All Outlines
+    private TypeEffect _telephoneScript;
 
-    void Start()
+    void Awake()
     {
         Outline[] outlines = FindObjectsByType<Outline>(FindObjectsSortMode.None);
         
@@ -12,5 +13,8 @@ public class StarterScript : MonoBehaviour
         {
             outline.enabled = false;
         }
+
+        _telephoneScript = FindAnyObjectByType<TypeEffect>(FindObjectsInactive.Include);
+        _telephoneScript.enabled = false;
     }
 }

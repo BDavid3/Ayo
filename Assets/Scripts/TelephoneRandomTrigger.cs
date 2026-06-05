@@ -1,17 +1,24 @@
+using System;
 using UnityEngine;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class TelephoneRandomTrigger : MonoBehaviour
 {
+    [SerializeField] private TelephoneInteract telephoneInteractScript;
     private AudioSource _audioSource;
     private bool _didItHit;
-    private MainInteractScript _mainInteractScript;
     
-    private void Start()
+    void Start()
     {
+        telephoneInteractScript.enabled = false;
         _audioSource = GetComponent<AudioSource>();
-        _mainInteractScript = GetComponent<MainInteractScript>();
-        _mainInteractScript.enabled = false;
+        StartCoroutine(HittingChance());
+    }
+
+    public void Restart()
+    {
+        telephoneInteractScript.enabled = false;
         StartCoroutine(HittingChance());
     }
 
@@ -19,13 +26,13 @@ public class TelephoneRandomTrigger : MonoBehaviour
     {
         while (true)
         {
-            int randomNumber = Random.Range(0, 10);
+            int randomNumber = Random.Range(0, 2);
             
             if (randomNumber == 0)
             {
-                _mainInteractScript.enabled = true;
+                telephoneInteractScript.enabled = true;
                 _audioSource.Play();
-                break;
+                yield break; // Exits Coroutine
             }
             yield return new WaitForSeconds(2f);
         }

@@ -1,18 +1,26 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TelephoneUI : MonoBehaviour
+public class TypeEffect : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogText;
     [SerializeField] private float typingSpeed;
     [TextArea] [SerializeField] private string fullText;
-    
-    void Start()
+
+    private void Start()
     {
-        dialogText.text = "";
         StartCoroutine(TypeText());
     }
+
+    public void TextCleanUp()
+    {
+        StopCoroutine(TypeText());
+        dialogText.text = "";
+    }
+
     IEnumerator TypeText()
     {
         foreach (char c in fullText)

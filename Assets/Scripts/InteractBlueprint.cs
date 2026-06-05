@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-public class MainInteractScript : MonoBehaviour
+public abstract class InteractBlueprint : MonoBehaviour
 {
     [SerializeField] private Outline outlineScript;
-    [SerializeField] private GameObject canvas;
+    [SerializeField] protected GameObject canvas;
     [SerializeField] private PlayerAndCameraMovement playerAndCameraMovementScript;
-    private bool _isInteract;
+    protected bool IsInteract;
     private bool _isInRange;
 
     void OnTriggerEnter(Collider other)
@@ -27,18 +27,21 @@ public class MainInteractScript : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         if (_isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            _isInteract = !_isInteract;
+            IsInteract = !IsInteract;
             // Set True
          
-            playerAndCameraMovementScript.enabled = !_isInteract;
-            Cursor.visible = _isInteract;
-            Cursor.lockState =  _isInteract ? CursorLockMode.None : CursorLockMode.Locked;
-            canvas.SetActive(_isInteract);
+            playerAndCameraMovementScript.enabled = !IsInteract;
+            Cursor.visible = IsInteract;
+            Cursor.lockState =  IsInteract ? CursorLockMode.None : CursorLockMode.Locked;
+            canvas.SetActive(IsInteract);
             
+            OnInteract();
         }
     }
+    // What to do after enabling canvas
+    protected abstract void OnInteract();
 }
