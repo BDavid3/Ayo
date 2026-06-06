@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 public class TelephoneRandomTrigger : MonoBehaviour
 {
     [SerializeField] private TelephoneInteract telephoneInteractScript;
-    [SerializeField] private TypeEffect typeEffectScript;
+    //[SerializeField] private TypeEffect typeEffectScript;
     private AudioSource _audioSource;
     private bool _didItHit;
     
