@@ -42,6 +42,5 @@ public abstract class InteractBlueprint : MonoBehaviour
             OnInteract();
         }
     }
-    // What to do after enabling canvas
     protected abstract void OnInteract();
 }

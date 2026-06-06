@@ -18,9 +18,9 @@ public class TelephoneInteract : InteractBlueprint
     {
         if (IsInteract)
         {
-            typeEffectScript.enabled = true;
             _audioSource.Stop();
-            typeEffectScript.TextCleanUp();
+            typeEffectScript.enabled = true;
+            typeEffectScript.StartTyping();
         }
         else
         {

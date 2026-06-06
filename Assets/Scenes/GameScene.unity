@@ -150,40 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypeEffect
   dialogText: {fileID: 1298806288}
   typingSpeed: 0.01
-  fullText: Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-    Hello Hello Hello Hello
+  dialogueSequence: {fileID: 11400000, guid: f6ebd6e308aee684994ad8ab7f3c344c, type: 2}
 --- !u!4 &34781518
 Transform:
   m_ObjectHideFlags: 0
@@ -3427,6 +3394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TelephoneRandomTrigger
   telephoneInteractScript: {fileID: 1316297164}
+  typeEffectScript: {fileID: 34781517}
 --- !u!114 &1316297164
 MonoBehaviour:
   m_ObjectHideFlags: 0

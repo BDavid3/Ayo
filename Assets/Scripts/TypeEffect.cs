@@ -8,18 +8,24 @@ public class TypeEffect : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogText;
     [SerializeField] private float typingSpeed;
-    [TextArea] [SerializeField] private string fullText;
+    [SerializeField] private DialogueSequence dialogueSequence;
 
-    public void TextCleanUp()
+    private int _index;
+
+    public void StartTyping()
     {
-        StopAllCoroutines();
-        dialogText.text = "";
         StartCoroutine(TypeText());
+        _index++;
+        if (_index >= dialogueSequence.lines.Count)
+        {
+            _index = 0;
+        }
     }
 
     IEnumerator TypeText()
     {
-        foreach (char c in fullText)
+        dialogText.text = "";
+        foreach (char c in dialogueSequence.lines[_index].text)
         {
             dialogText.text += c;
             yield return new WaitForSeconds(typingSpeed);
