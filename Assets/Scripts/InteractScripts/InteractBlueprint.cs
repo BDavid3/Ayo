@@ -5,7 +5,7 @@ public abstract class InteractBlueprint : MonoBehaviour
 {
     [SerializeField] private Outline outlineScript;
     [SerializeField] protected GameObject canvas;
-    [SerializeField] private PlayerAndCameraMovement playerAndCameraMovementScript;
+    [SerializeField] private PlayerMovement playerMovementScript;
     protected bool IsInteract;
     private bool _isInRange;
 
@@ -34,7 +34,7 @@ public abstract class InteractBlueprint : MonoBehaviour
             IsInteract = !IsInteract;
             // Set True
          
-            playerAndCameraMovementScript.enabled = !IsInteract;
+            playerMovementScript.enabled = !IsInteract;
             Cursor.visible = IsInteract;
             Cursor.lockState =  IsInteract ? CursorLockMode.None : CursorLockMode.Locked;
             canvas.SetActive(IsInteract);

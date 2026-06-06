@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private PlayerAndCameraMovement playerAndCameraMovement;
+    [SerializeField] private PlayerMovement playerMovementScript;
     private bool _isActive;
 
     void Update()
@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = _isActive ?  CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = _isActive;
             
-            playerAndCameraMovement.enabled = !_isActive;
+            playerMovementScript.enabled = !_isActive;
         }
     }
 
